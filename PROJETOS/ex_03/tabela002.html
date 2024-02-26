@@ -10,23 +10,35 @@
         font-family: Arial, Helvetica, sans-serif;
     }
     table{
-        width: 600px;
+        width: 400px;
         border-collapse: collapse;
     }
     td, th{
         border: 1px solid black;
         padding: 10px;
     }
+    caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+    }
     thead, tfoot{
         background-color: blueviolet;
         color: white;
+    }
+    tbody > tr:nth-child(odd){ /*2n-1*/
+        background-color: white;
+    }
+    tbody > tr:nth-child(even){/*2n*/
+        background-color: lightgray;
     }
     td.num{
         text-align: right;
     }
 </style>
 <body>
-    <h1>Uso de Tabelas Grandes</h1>
+    <h1>Estudo prático: Tabelas Grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES:
         TABLE
@@ -37,11 +49,12 @@
             TFOOT
                 TR, TD, TH
     -->
-    <table>
+    <table id="data-table">
+        <caption>População por Estado no Brasil</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         
@@ -159,10 +172,27 @@
         
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td>0000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td id="total-population" class="num"></td>
             </tr>
         </tfoot>
     </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            calculateTotal();
+        });
+
+        function calculateTotal() {
+            var cells = document.querySelectorAll("#data-table tbody td.num");
+            var total = 0;
+
+            cells.forEach(function (cell) {
+                total += parseFloat(cell.textContent.replace(/\s/g, '').replace(',', '.')) || 0;
+            });
+
+            document.getElementById('total-population').textContent = total.toLocaleString('pt-BR');
+        }
+    </script>
 </body>
 </html>
