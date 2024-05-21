@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Formulário 8</h1>
+    <form action="cadastrar.php" method="get" autocomplete="on">
+        <p>
+            <label for="idNum1">Número 1:</label>
+            <input type="number" name="num1" id="idNum1" min="0" max="50" required
+            oninput = "idSoma.innerHTML = Number(idNum1.value) + Number(idNum2.value)">
+        </p>
+
+        <p>
+            <label for="idNum2">Número 2:</label>
+            <input type="number" name="num1" id="idNum2" min="0" max="50" required
+            oninput = "idSoma.innerHTML = Number(idNum1.value) + Number(idNum2.value)">
+            
+        </p>
+
+        <p>
+            <label for="idSoma">Soma: </label>
+            <output name="soma" id="idSoma">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
