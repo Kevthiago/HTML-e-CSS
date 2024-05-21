@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Formulário 7</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="idEstado">Estado:</label>
+            <select name="estado" id="idEstado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AM">Amazonas</option>
+                <option value="AP">Amapá</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="PR">Paraná</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SE">Sergipe</option>
+                <option value="SP">São Paulo</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </p>    
+
+        <p>
+            <label for="idProf">Profissão:</label>
+            <input type="text" name="profissao", id="idProf" list="idListaProf">
+            <datalist id="idListaProf">
+                <option value="ARQ">Arquiteto</option>
+                <option value="ADV">Advogado</option>
+                <option value="ENG">Engenheiro</option>
+                <option value="MED">Médico</option>
+                <option value="ENF">Enfermeiro</option>
+                <option value="PROF">Professor</option>
+                <option value="DES">Designer</option>
+                <option value="JORN">Jornalista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="ADM">Administrador</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="idMsg">Mensagem:</label><br>
+            <textarea name="textarea" id="idMsg" placeholder="Deixe aqui sua mensagem..."></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
