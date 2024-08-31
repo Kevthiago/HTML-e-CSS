@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 0px rgba(53, 53, 53, 0.623);
+}
+i#burguer{
+    background-color: rgb(0,0,139);
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+i#burguer:hover{
+    background-color: white;
+    color: rgb(0,0,139);
+}
+body, html{
+    background-color: rgb(134, 134, 253);
+}
+header{
+    background-color: rgb(0,0,255);
+}
+header h1{
+    padding: 10px;
+    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+    text-align: center;
+    font-size: 3em;
+    color: rgb(0,0,139);
+}
+menu{
+    display: none;
+}
+menu ul{
+    list-style-type: none;
+}
+menu > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: gr;
+    color: white;
+    background-color: rgb(0,0,139);
+    border-top: 2px solid rgb(0,0,255);
+}
+menu > ul > li > a:hover{
+    background-color: white;
+    color: rgb(0,0,139);
+}
+main{
+    width: 90vw;
+    background-color: rgb(255, 255, 255);
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+article h2{
+    padding-bottom: 20px;
+}
+article > p{
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+footer{
+    background-color: rgb(0,0,255);
+}
+footer{
+    padding: 10px;
+    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
