@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões totais */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background-color: lightgray;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+}
+
+aside {
+    padding: 20px;
+}
+
+.aside-left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgb(100, 100, 255);
+    justify-content: flex-start; /* Alinha os itens no início */
+    padding: 20px;
+}
+
+.aside-left img {
+    margin: 0 auto 40px auto;
+    background-color: white;
+    border-radius: 50%; /* Altera para garantir um círculo */
+    border: 6px solid blue;
+    width: 150px;
+}
+
+.aside-left .sobre h4 {
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o título */
+}
+
+.aside-left .sobre ul {
+    padding-left: 30px;
+    list-style-type: none; /* Remove as bolinhas da lista */
+}
+
+.aside-left .sobre ul li {
+    margin-bottom: 10px;
+}
+
+.aside-right {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between; /* Distribui o conteúdo ao longo da coluna */
+    padding: 20px;
+}
+
+.aside-right h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.aside-right .resumo {
+    margin-bottom: 40px;
+}
+
+.aside-right .resumo p {
+    text-align: justify; /* Ajusta o texto do resumo para alinhar em blocos */
+}
+
+.content-sections {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-right div h4 {
+    margin-bottom: 10px;
+}
+
+.aside-right .experiencia .exp, .formacao .form {
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+.aside-right .experiencia .exp h5, .formacao .form h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.aside-right .blocos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.aside-right .blocoA, .blocoB, .blocoC, .blocoD {
+    width: 50px;
+    height: 50px;
+}
+
+.aside-right .blocoA {
+    background-color: blue;
+}
+
+.aside-right .blocoB {
+    background-color: yellow;
+}
+
+.aside-right .blocoC {
+    background-color: red;
+}
+
+.aside-right .blocoD {
+    background-color: green;
+}

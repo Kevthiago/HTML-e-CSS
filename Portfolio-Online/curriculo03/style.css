@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+header .photo{
+    flex: 1;
+    background-color: white;
+}
+
+header img{
+    width: 100%;
+    height: auto;
+}
+
+header .id{
+    padding: 10px;
+    text-align: center;
+}
+
+header .text{
+    flex: 3;
+    padding: 20px;
+    background-color: lightgreen;
+}
+
+.asides{
+    display: flex;
+    flex-direction: row;
+}
+
+.aside-left{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: lightblue;
+    padding: 1em;
+}
+
+.aside-right{
+    display: grid;
+    flex: 3;
+    background-color: lightcoral;
+    padding: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+}
